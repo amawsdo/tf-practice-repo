@@ -53,6 +53,9 @@ resource "aws_subnet" "db" {
 
 resource "aws_eip" "nat" {
   vpc = true
+  tags = {
+    Name = "nat-gw-eip-tf"
+  }
 }
 
 resource "aws_nat_gateway" "nat_gw" {
