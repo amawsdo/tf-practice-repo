@@ -45,7 +45,7 @@ resource "aws_route_table_association" "app" {
 resource "aws_subnet" "db" {
   vpc_id                  = aws_vpc.vpc_tf.id
   map_public_ip_on_launch = false
-  cidr_block              = "10.0.4.0/24"
+  cidr_block              = "10.0.2.0/24"
   tags = {
     Name = "db-tf"
   }

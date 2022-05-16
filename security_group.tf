@@ -1,5 +1,5 @@
 resource "aws_security_group" "app_sg" {
-  name        = "allow_SSH"
+  name        = "App-SG"
   description = "Allow SSH inbound traffic"
   vpc_id      = aws_vpc.vpc_tf.id
 
