@@ -14,6 +14,9 @@ resource "aws_instance" "master" {
   # key name
   key_name = var.key_name
 
+  # user data for master server
+  user_data = "${file("install_master_sw.sh")}"
+
   tags = {
     Name = "Master-Server"
   }
