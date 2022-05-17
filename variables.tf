@@ -1,28 +1,13 @@
-#variable "access_key" {}
-#variable "secret_key" {}
-/*
-variable "region" {
-  default = "us-east-2"
-}
-variable "ami_id" {
-  type = map(any)
-  default = {
-    us-east-2 = "ami-0b614a5d911900a9b"
-    us-east-1 = "ami-abcd"
-  }
-}
-*/
-
 variable "region" {
   description = "Environment build in specific reagion"
-  type    = string
-  default = "us-east-2" #ohio
+  type        = string
+  default     = "us-east-2" #ohio
 }
 
 variable "ami_id" {
   type = map(string)
   default = {
-#    us-east-2    = "ami-0b614a5d911900a9b"
+    #    us-east-2    = "ami-0b614a5d911900a9b"
     us-east-2    = "ami-0ba62214afa52bec7" #rhel8 free tier eligible
     us-east-1    = "ami-035b3c7efe6d061d5"
     eu-west-2    = "ami-132b3c7efe6sdfdsfd"

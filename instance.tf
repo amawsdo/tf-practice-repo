@@ -1,8 +1,3 @@
-/*
-provider "aws" {
-  region = var.region
-}
-*/
 resource "aws_instance" "master" {
   ami           = lookup(var.ami_id, var.region)
   instance_type = var.instance_type
@@ -15,7 +10,7 @@ resource "aws_instance" "master" {
   key_name = var.key_name
 
   # user data for master server
-  user_data = "${file("install_master_sw.sh")}"
+  user_data = file("install_master_sw.sh")
 
   tags = {
     Name = "Master-Server"
